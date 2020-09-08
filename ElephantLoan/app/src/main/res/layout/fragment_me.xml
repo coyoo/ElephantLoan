@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+   <LinearLayout
+       android:id="@+id/layout_mefragment_title"
+       android:layout_width="match_parent"
+       android:layout_height="178dp"
+       android:orientation="vertical"
+       android:background="@mipmap/me_title_bg">
+
+
+
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="38dp"
+           android:padding="15dp"
+           android:orientation="horizontal">
+
+           <de.hdodenhof.circleimageview.CircleImageView
+               android:id="@+id/Img_usericon"
+               android:layout_width="77dp"
+               android:layout_height="77dp"
+               android:layout_marginLeft="9dp"
+               android:src="@mipmap/tx_icon_2"
+               app:civ_border_width="2dp"
+               app:civ_border_color="@color/white"
+              />
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_toRightOf="@+id/Img_usericon"
+               android:layout_centerVertical="true"
+               android:layout_marginLeft="20dp"
+               android:orientation="vertical">
+               <TextView
+                   android:id="@+id/tv_me_username"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/white"
+                   android:textSize="21sp"
+                   android:text="Default name"/>
+               <TextView
+                   android:id="@+id/tv_me_phone_number"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:textColor="@color/white"
+                   android:textSize="14sp"
+                   android:text="PhoneNumber"/>
+
+           </LinearLayout>
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+               android:layout_centerVertical="true"
+               android:layout_marginRight="2dp"
+               android:src="@mipmap/me_setting"/>
+       </RelativeLayout>
+
+
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layout_me_credit_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:padding="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/me_img_credit"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:textSize="14sp"
+                android:textColor="@color/default_black"
+                android:text="Email"/>
+
+
+            <ImageView
+                android:layout_width="4dp"
+                android:layout_height="7.5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/item_right_jiantou"/>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_me_my_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/me_my_profile"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:textSize="14sp"
+                android:textColor="@color/default_black"
+                android:text="My Profile"/>
+
+
+            <ImageView
+                android:layout_width="4dp"
+                android:layout_height="7.5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/item_right_jiantou"/>
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout_me_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/me_feedback"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:textSize="14sp"
+                android:textColor="@color/default_black"
+                android:text="Feedback"/>
+
+
+            <ImageView
+                android:layout_width="4dp"
+                android:layout_height="7.5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/item_right_jiantou"/>
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout_me_premiun_insurance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/me_premiun_insurance"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:textSize="14sp"
+                android:textColor="@color/default_black"
+                android:text="Premiun insurance"/>
+
+
+            <ImageView
+                android:layout_width="4dp"
+                android:layout_height="7.5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/item_right_jiantou"/>
+
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

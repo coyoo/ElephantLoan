@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">PandaLoan</string>
+    <string name="tab_home">Home</string>
+    <string name="tab_message">Verification</string>
+    <string name="tab_me">Me</string>
+    <string name="tab_home2">Home</string>
+    <string name="tab_order">Orders</string>
+    <string name="tab_me2">Me</string>
+
+    <!--MainActivity-->
+    <string name="no_date">No relevant data was found.</string>
+    <!--Login页-->
+    <string name="login_title">ELEPHANT LOAN</string>
+    <string name="login_phone_hint">+91- Enter your phone number</string>
+    <string name="login_otp_hint">Enter OTP</string>
+    <string name="login_remind">By continuing, you are agree to our User Registration</string>
+
+    <!--Home页-->
+    <string name="home_title">Elephant Loan</string>
+    <string name="home_title1">Maxium Loan Amount Up to</string>
+    <string name="home_high">High Pass Rate</string>
+    <string name="home_low">Low Interest</string>
+    <string name="home_quick_loan">Quick Loan</string>
+    <string name="home_little_text">1000 for 1 day，interest as low as 0.04%</string>
+    <string name="home_Step_text">Three Steps to loan</string>
+    <string name="home_explain1_text">Online Service 1 Compliance agency</string>
+    <string name="home_explain2_text">7*18 service</string>
+
+
+    <!--Home2页-->
+    <string name="home_title2">Recommend</string>
+    <string name="home_title2_1">loan super market for you</string>
+    <string name="home_cash_name">Cash Name</string>
+    <string name="home_btn">Get it Now</string>
+    <string name="home_item_name">Palaupay</string>
+    <string name="home_item_pay_type">Hot</string>
+    <string name="home_item_quota">quota</string>
+    <string name="home_item_interest">interest</string>
+    <string name="home_item_time">time</string>
+    <string name="home_item_stage">stage</string>
+
+
+
+    <!--Verification页-->
+
+    <string name="ver_basic">Basic Info</string>
+    <string name="ver_work">Work Info</string>
+    <string name="ver_bank">Bank Info</string>
+    <string name="ver_list_birthday">Birthday</string>
+    <string name="ver_list_birthday_default">Date</string>
+    <string name="ver_list_gender">Please select gender</string>
+    <string name="ver_list_gender_default">Male</string>
+    <string name="ver_list_married">Married</string>
+    <string name="ver_list_married_default">Unmarried</string>
+    <string name="ver_list_fullName">FullName</string>
+    <string name="ver_list_default">Please enter</string>
+    <string name="ver_list_email">Email</string>
+    <string name="ver_next">Next</string>
+
+    <!--WorkInfo页-->
+
+    <string name="work_info_employment_type">Employment Type</string>
+    <string name="work_info_default">Please choose</string>
+    <string name="work_info_month">Uncome Monthly</string>
+    <string name="work_info_since">Working Since</string>
+
+
+    <!--BankInfo页-->
+    <string name="bank_info_ifsc">IFSC code</string>
+    <string name="bank_info_branch_name">Branch Name</string>
+    <string name="bank_info_account_number">Bank Account No.</string>
+
+    <!--GetLoan页-->
+    <string name="loan_amount">Loan Amount</string>
+    <string name="loan_term_day">Term (day)</string>
+    <string name="loan_disbursal">Disbursal</string>
+    <string name="loan_interest">Interest</string>
+    <string name="loan_repayment">Repayment</string>
+    <string name="loan_sencurity_deposit">Sencurity Deposit</string>
+    <string name="loan_remind_connect">If you cannot prove your solvency within 90 minute, you will be disqualified from the loan</string>
+    <string name="loan_button_txt">Borrow money</string>
+
+    <!--Loan Qualification Approval頁  贷款资格审批ye-->
+    <string name="approval_title">Progress tips</string>
+    <string name="approval_connect"> Dear customer, due to the epidemic situ- \n ation (SARcov-2 1 covid-19), we will take systematic approvaland manual approval, which is expected to take 4-8hours. \n Please wait for the results.</string>
+
+    <!--message board页（用户意见）-->
+    <string name="edt_hint">Hello,please describe your question.</string>
+    <string name="btn_ok">Submit</string>
+
+    <!--Order頁-->
+
+    <string name="loan_type_best">Best recommend</string>
+    <string name="loan_type_high">High quota</string>
+
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

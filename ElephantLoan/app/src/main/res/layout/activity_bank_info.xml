@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_layout_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="6dp"
+            android:background="@mipmap/home_shadow_bg"/>
+
+        <ImageView
+            android:id="@+id/verification_line1"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginLeft="39dp"
+            android:layout_marginTop="39dp"
+            android:layout_marginRight="39dp"
+            android:background="@drawable/gray_line1"/>
+
+
+        <ImageView
+            android:id="@+id/verification_ball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:layout_marginLeft="72dp"
+            android:src="@mipmap/home_select_ball"
+            />
+        <ImageView
+            android:id="@+id/verification_ball2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/verification_ball"
+            android:layout_marginTop="29dp"
+            android:layout_marginLeft="84dp"
+            android:src="@mipmap/home_select_ball"
+            />
+        <ImageView
+            android:id="@+id/verification_ball3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/verification_ball2"
+            android:layout_marginTop="29dp"
+            android:layout_marginLeft="79dp"
+            android:src="@mipmap/home_select_ball"
+            />
+        <TextView
+            android:id="@+id/verification_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/verification_ball"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="54dp"
+            android:textColor="@color/main_color"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="@string/ver_basic"/>
+        <TextView
+            android:id="@+id/verification_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/verification_ball"
+            android:layout_toRightOf="@+id/verification_text1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="43dp"
+            android:textColor="@color/main_color"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="@string/ver_work"/>
+        <TextView
+            android:id="@+id/verification_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/verification_ball"
+            android:layout_toRightOf="@+id/verification_text2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="44dp"
+            android:textColor="@color/main_color"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="@string/ver_bank"/>
+
+    </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bank_info_ifsc"
+                    android:textColor="@color/default_black"
+                    android:textSize="14sp"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edt_bank_info_ifsc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/main_color"
+                        android:textCursorDrawable="@drawable/maincolor_edit_cursor"
+                        android:singleLine="true"
+                        android:theme="@style/MyEditVerificatoin"
+                        android:hint="@string/ver_list_default"/>
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray_line"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bank_info_branch_name"
+                    android:textColor="@color/default_black"
+                    android:textSize="14sp"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edt_bank_info_brach"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/main_color"
+                        android:theme="@style/MyEditVerificatoin"
+                        android:textCursorDrawable="@drawable/maincolor_edit_cursor"
+                        android:singleLine="true"
+                        android:hint="@string/ver_list_default"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray_line"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bank_info_account_number"
+                    android:textColor="@color/default_black"
+                    android:textSize="14sp"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edt_bank_info_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/main_color"
+                        android:theme="@style/MyEditVerificatoin"
+                        android:textCursorDrawable="@drawable/maincolor_edit_cursor"
+                        android:singleLine="true"
+                        android:hint="@string/ver_list_default"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray_line"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btn_bank_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="13dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="45dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/maincolor_btn"
+                android:text="@string/ver_next"
+                android:textSize="14sp"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+
+
+</LinearLayout>

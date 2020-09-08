@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="main_color">#3AB64A</color>
+    <color name="appha_main_color">#22487AF6</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="selector_grey">#DDDDDD</color>
+    <color name="tab_gb">#F3F5F4</color>
+    <color name="loading_background">#00ffffff</color>
+    <color name="default_black">#333333</color>
+    <color name="datingcolor">#afafaf</color>
+    <color name="home_center_txt">#727FF7</color>
+    <color name="home_little_text">#656565</color>
+    <color name="home_btn">#ff4779f5</color>
+    <color name="home_little_title">#666666</color>
+    <color name="home_explain_text">#CDCDCD</color>
+
+    <color name="verification_line">#ff487af6</color>
+    <color name="verification_line2">#B4B4B4</color>
+    <color name="gray_ball">#E2E2E2</color>
+    <color name="gray_text">#999999</color>
+    <color name="list_line">#EEF3FF</color>
+    <color name="gray_line">#ffeef3ff</color>\
+
+    <color name="transparent">#00000000</color>
+
+    <color name="color_8290AF">#666666</color>
+    <color name="orange">#ED654A</color>
+
+
+
+</resources>

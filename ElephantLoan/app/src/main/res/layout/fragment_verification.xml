@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <include layout="@layout/item_layout_title" />
+    <include layout="@layout/loading"
+        android:visibility="gone"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="6dp"
+            android:background="@mipmap/home_shadow_bg"/>
+
+        <ImageView
+            android:id="@+id/verification_line1"
+            android:layout_width="43dp"
+            android:layout_height="5dp"
+            android:layout_marginLeft="39dp"
+            android:layout_marginTop="39dp"
+            android:background="@drawable/gray_line1" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_toRightOf="@+id/verification_line1"
+            android:layout_marginTop="39dp"
+            android:layout_marginRight="39dp"
+            android:background="@drawable/gary_line2"/>
+
+        <ImageView
+            android:id="@+id/verification_ball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:layout_marginLeft="72dp"
+            android:src="@mipmap/home_select_ball"
+            />
+        <ImageView
+            android:id="@+id/verification_ball2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/verification_ball"
+            android:layout_marginTop="34dp"
+            android:layout_marginLeft="89dp"
+            android:src="@drawable/ball_gray"
+            />
+        <ImageView
+            android:id="@+id/verification_ball3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/verification_ball2"
+            android:layout_marginTop="34dp"
+            android:layout_marginLeft="89dp"
+            android:src="@drawable/ball_gray"
+            />
+        <TextView
+            android:id="@+id/verification_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/verification_ball"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="54dp"
+            android:textColor="@color/main_color"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="@string/ver_basic"/>
+        <TextView
+            android:id="@+id/verification_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/verification_ball"
+            android:layout_toRightOf="@+id/verification_text1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="43dp"
+            android:textColor="@color/gray_text"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="@string/ver_work"/>
+        <TextView
+            android:id="@+id/verification_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/verification_ball"
+            android:layout_toRightOf="@+id/verification_text2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="44dp"
+            android:textColor="@color/gray_text"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="@string/ver_bank"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_basicinfo_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ver_list_birthday"
+                android:textColor="@color/default_black"
+                android:textSize="14sp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_birthday_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray_text"
+                    android:text="@string/work_info_default"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/item_right_jiantou"/>
+
+            </RelativeLayout>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:layout_marginTop="10dp"
+               android:background="@color/gray_line"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_basicinfo_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ver_list_gender"
+                android:textColor="@color/default_black"
+                android:textSize="14sp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_basic_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray_text"
+                    android:text="@string/work_info_default"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/item_right_jiantou"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_line"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_basicinfo_married"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ver_list_married"
+                android:textColor="@color/default_black"
+                android:textSize="14sp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_basic_married"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray_text"
+                    android:text="@string/work_info_default"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/item_right_jiantou"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_line"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_basicinfo_fullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ver_list_fullName"
+                android:textColor="@color/default_black"
+                android:textSize="14sp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_basicinfo_fullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/main_color"
+                    android:textCursorDrawable="@drawable/maincolor_edit_cursor"
+                    android:singleLine="true"
+                    android:theme="@style/MyEditVerificatoin"
+                    android:text=""
+                    android:hint="@string/ver_list_default"/>
+
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:src="@mipmap/item_right_jiantou"/>-->
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_line"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_basicinfo_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ver_list_email"
+                android:textColor="@color/default_black"
+                android:textSize="14sp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_basicinfo_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/main_color"
+                    android:theme="@style/MyEditVerificatoin"
+                    android:textCursorDrawable="@drawable/maincolor_edit_cursor"
+                    android:singleLine="true"
+                    android:text=""
+                    android:hint="@string/ver_list_default"/>
+
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:src="@mipmap/item_right_jiantou"/>-->
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_line"/>
+
+            <Button
+                android:id="@+id/btn_basic_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="13dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/maincolor_btn"
+                android:text="@string/ver_next"
+                android:textSize="14sp"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>
