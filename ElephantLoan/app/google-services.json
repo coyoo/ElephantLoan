@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "407836877682",
+    "firebase_url": "https://elephant-loan.firebaseio.com",
+    "project_id": "elephant-loan",
+    "storage_bucket": "elephant-loan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407836877682:android:906207721349ec6bbab3eb",
+        "android_client_info": {
+          "package_name": "com.india.elephantloan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407836877682-is84j2p674l397aoudp3h84req9djm2b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.india.elephantloan",
+            "certificate_hash": "cebd499bc897379f128dd5263ba77ab8d3c16ee5"
+          }
+        },
+        {
+          "client_id": "407836877682-sbmm7e02950jvoe316htijoknahtqmt1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAF2xQehs6WLsbZtQMrOJ0tgDgAVbF-RDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407836877682-sbmm7e02950jvoe316htijoknahtqmt1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

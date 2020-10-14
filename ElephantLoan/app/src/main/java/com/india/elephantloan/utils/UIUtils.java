@@ -8,7 +8,7 @@ import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.view.inputmethod.InputMethodManager;
 
-import com.india.elephantloan.base.MyApplication;
+import com.india.elephantloan.base.BaseApplication;
 import com.india.elephantloan.constant.Constants;
 
 /**
@@ -19,7 +19,7 @@ public class UIUtils {
      * 得到Context
      */
     public static Context getContext() {
-        return MyApplication.getContext();
+        return BaseApplication.getContext();
     }
 
     /**
@@ -97,7 +97,7 @@ public class UIUtils {
      * @return
      */
     public static SharedPreferences getSharedPreferences() {
-        return MyApplication.getSharedPreferences();
+        return BaseApplication.getSharedPreferences();
     }
 
     /**

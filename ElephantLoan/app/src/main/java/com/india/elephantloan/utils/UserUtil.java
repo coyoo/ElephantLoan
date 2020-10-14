@@ -58,6 +58,18 @@ public class UserUtil {
     public static void setGender(String gender) {
         UIUtils.getSharedPreferences().edit().putString(Constants.GENDER,gender).commit();
     }
+    public static String getCampaign() {
+        return UIUtils.getSharedPreferences().getString(Constants.CAMPAIGN, "");
+    }
 
+    public static void setCampaign(String campaign) {
+        UIUtils.getSharedPreferences().edit().putString(Constants.CAMPAIGN, campaign).commit();
+    }
+    public static boolean isFirstEnter() {
+        return UIUtils.getSharedPreferences().getBoolean(Constants.ISFIRSTENTER, false);
+    }
 
+    public static void setIsFirstEnter(boolean isFirstEnter) {
+        UIUtils.getSharedPreferences().edit().putBoolean(Constants.ISFIRSTENTER, isFirstEnter).commit();
+    }
 }

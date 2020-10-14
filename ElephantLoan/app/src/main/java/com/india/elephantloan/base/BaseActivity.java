@@ -3,6 +3,7 @@ package com.india.elephantloan.base;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -32,9 +33,21 @@ import com.india.elephantloan.ui.view.loadingpager.ErrorLayout;
 import com.india.elephantloan.ui.view.loadingpager.OnRetryListener;
 import com.india.elephantloan.ui.view.loadingpager.OnShowHideViewListener;
 import com.india.elephantloan.ui.view.loadingpager.StatusLayoutManager;
-import com.india.elephantloan.utils.appUtil;
+import com.india.elephantloan.utils.AppUtil;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.StringReader;
 import java.lang.reflect.Method;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import javax.net.ssl.HttpsURLConnection;
 
 
 /**
@@ -49,7 +62,7 @@ public abstract class BaseActivity extends FragmentActivity{
     @Override
     protected void onResume() {
         super.onResume();
-        appUtil.closeSoftKeybord(this);
+        AppUtil.closeSoftKeybord(this);
     }
 
     @Override
@@ -64,11 +77,12 @@ public abstract class BaseActivity extends FragmentActivity{
         mLoadingPager.showContent();
         initData();
         initListener();
+
     }
 
     protected void setCusTomeTitle(String s) {
 
-        TextView tv_title = (TextView) findViewById(R.id.tv_title);
+        TextView tv_title = findViewById(R.id.tv_title);
         tv_title.setText(s);
     }
 

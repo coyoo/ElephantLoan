@@ -14,12 +14,13 @@ import com.india.elephantloan.base.BaseFragment;
 import com.india.elephantloan.ui.activity.LoginActivity;
 import com.india.elephantloan.ui.activity.MainActivity;
 import com.india.elephantloan.ui.activity.MessageBoardActivity;
+import com.india.elephantloan.ui.activity.WebActivity;
 import com.india.elephantloan.utils.MyToast;
 import com.india.elephantloan.utils.UIUtils;
 import com.india.elephantloan.utils.UserUtil;
 
 
-public class MeFragment2 extends BaseFragment {
+public class UserFragmentTwo extends BaseFragment {
 
     LinearLayout layoutTitle;
     RelativeLayout layoutEmail,layoutFeekback,layoutPremiunInsurance;
@@ -44,9 +45,9 @@ public class MeFragment2 extends BaseFragment {
     protected void initData() {
         if (!UserUtil.getPhoneNum().equals("")){
             String str=UserUtil.getPhoneNum();
-            String name="User"+UserUtil.getPhoneNum().substring(7,11);
+            String name="User"+UserUtil.getPhoneNum().substring(str.length()-4,str.length());
             tvUserName.setText(name);
-            String number=UserUtil.getPhoneNum().substring(0,3)+"****"+UserUtil.getPhoneNum().substring(7,11);
+            String number=UserUtil.getPhoneNum().substring(0,3)+"****"+UserUtil.getPhoneNum().substring(str.length()-4,str.length());
             tvPhoneNumber.setText(number);
         }
     }
@@ -103,7 +104,11 @@ public class MeFragment2 extends BaseFragment {
             @Override
             public void onClick(View v) {
                 if(UIUtils.isLogin()){
-                    MyToast.show(getActivity(),"保费保险开发中");
+//                    MyToast.show(getActivity(),"保费保险开发中");
+                    Intent intent=new Intent(getActivity(), WebActivity.class);
+                    intent.putExtra("url","https://www.jq62.com/useragreement/refund.html");
+                    intent.putExtra("title","Premiun Insurance");
+                    startActivity(intent);
                 }else{
                     Intent intent=new Intent(getActivity(), LoginActivity.class);
                     startActivity(intent);

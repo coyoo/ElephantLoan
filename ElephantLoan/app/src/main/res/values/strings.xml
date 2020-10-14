@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">PandaLoan</string>
+    <string name="app_name">ElephantLoan</string>
+    <string name="facebook_app_id">361311811973431</string>
+    <string name="fb_login_protocol_scheme">fb361311811973431</string>
     <string name="tab_home">Home</string>
     <string name="tab_message">Verification</string>
     <string name="tab_me">Me</string>
@@ -14,6 +16,7 @@
     <string name="login_phone_hint">+91- Enter your phone number</string>
     <string name="login_otp_hint">Enter OTP</string>
     <string name="login_remind">By continuing, you are agree to our User Registration</string>
+    <string name="login_agreement">User login protocol</string>
 
     <!--Home页-->
     <string name="home_title">Elephant Loan</string>
@@ -21,7 +24,7 @@
     <string name="home_high">High Pass Rate</string>
     <string name="home_low">Low Interest</string>
     <string name="home_quick_loan">Quick Loan</string>
-    <string name="home_little_text">1000 for 1 day，interest as low as 0.04%</string>
+    <string name="home_little_text">1000 for 1 day，interest as low as 0.05%</string>
     <string name="home_Step_text">Three Steps to loan</string>
     <string name="home_explain1_text">Online Service 1 Compliance agency</string>
     <string name="home_explain2_text">7*18 service</string>
@@ -38,7 +41,6 @@
     <string name="home_item_interest">interest</string>
     <string name="home_item_time">time</string>
     <string name="home_item_stage">stage</string>
-
 
 
     <!--Verification页-->
@@ -82,7 +84,7 @@
 
     <!--Loan Qualification Approval頁  贷款资格审批ye-->
     <string name="approval_title">Progress tips</string>
-    <string name="approval_connect"> Dear customer, due to the epidemic situ- \n ation (SARcov-2 1 covid-19), we will take systematic approvaland manual approval, which is expected to take 4-8hours. \n Please wait for the results.</string>
+    <string name="approval_connect"> Dear customer, due to the epidemic situation (SARcov-2 1 covid-19), we will take systematic approvaland manual approval, which is expected to take 4-8hours. \nPlease wait for the results.</string>
 
     <!--message board页（用户意见）-->
     <string name="edt_hint">Hello,please describe your question.</string>
@@ -92,8 +94,6 @@
 
     <string name="loan_type_best">Best recommend</string>
     <string name="loan_type_high">High quota</string>
-
-
 
 
     <!-- TODO: Remove or change this placeholder text -->

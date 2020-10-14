@@ -12,7 +12,7 @@ import com.india.elephantloan.constant.Constants;
 import com.india.elephantloan.net.HttpParams;
 import com.india.elephantloan.utils.MyToast;
 import com.india.elephantloan.utils.UserUtil;
-import com.india.elephantloan.utils.appUtil;
+import com.india.elephantloan.utils.AppUtil;
 
 import org.json.JSONObject;
 
@@ -36,7 +36,7 @@ public class MessageBoardActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        appUtil.setTranslucentStatus(this);
+        AppUtil.setTranslucentStatus(this);
 
     }
 

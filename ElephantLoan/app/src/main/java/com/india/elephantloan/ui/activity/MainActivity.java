@@ -21,16 +21,16 @@ import com.india.elephantloan.base.BaseActivity;
 import com.india.elephantloan.base.BaseFragment;
 import com.india.elephantloan.constant.Constants;
 import com.india.elephantloan.ui.fragment.HomeFragment;
-import com.india.elephantloan.ui.fragment.HomeFragment2;
-import com.india.elephantloan.ui.fragment.MeFragment;
-import com.india.elephantloan.ui.fragment.MeFragment2;
+import com.india.elephantloan.ui.fragment.HomeFragmentTwo;
+import com.india.elephantloan.ui.fragment.UserFragment;
+import com.india.elephantloan.ui.fragment.UserFragmentTwo;
 import com.india.elephantloan.ui.fragment.OrderFragment;
 import com.india.elephantloan.ui.fragment.VerificationFragment;
 import com.india.elephantloan.utils.MyToast;
 import com.india.elephantloan.utils.RestartAppService;
 import com.india.elephantloan.utils.UIUtils;
 import com.india.elephantloan.utils.UserUtil;
-import com.india.elephantloan.utils.appUtil;
+import com.india.elephantloan.utils.AppUtil;
 
 
 import org.json.JSONObject;
@@ -52,8 +52,6 @@ public class MainActivity extends BaseActivity {
     private List<BaseFragment> mFragmentList = new ArrayList<>();
     public BottomBarLayout mBottomBarLayout;
     private String strPayState;
-//    RelativeLayout loading;
-    //
     private int[] mNormalIconIds = new int[]{
             R.mipmap.unselect_home,
             R.mipmap.unselect_verification, R.mipmap.unselect_me
@@ -64,12 +62,12 @@ public class MainActivity extends BaseActivity {
             R.drawable.icon_verification, R.drawable.icon_me
     };
 
-    private int[] mTitleIds ;
+    private int[] mTitleIds;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        appUtil.setTranslucentStatus(this);
+        AppUtil.setTranslucentStatus(this);
     }
 
     @Override
@@ -85,10 +83,10 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-        if(!UIUtils.isLogin()){
-            Intent intent=new Intent(MainActivity.this,LoginActivity.class);
+        if (!UIUtils.isLogin()) {
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
-        }else{
+        } else {
             getPayState();
         }
 
@@ -119,6 +117,7 @@ public class MainActivity extends BaseActivity {
             }
         }
     };
+
     @Override
     protected void onRetry() {
         super.onRetry();
@@ -127,26 +126,26 @@ public class MainActivity extends BaseActivity {
 
     @NonNull
     private BaseFragment createFragment(int titleId) {
-        BaseFragment fragment=null;
+        BaseFragment fragment = null;
         switch (titleId) {
             case R.string.tab_home:
-              fragment = new HomeFragment();
+                fragment = new HomeFragment();
                 break;
             case R.string.tab_message:
                 fragment = new VerificationFragment();
                 break;
             case R.string.tab_me:
-                fragment = new MeFragment();
+                fragment = new UserFragment();
                 break;
 
             case R.string.tab_home2:
-                fragment = new HomeFragment2();
+                fragment = new HomeFragmentTwo();
                 break;
             case R.string.tab_order:
                 fragment = new OrderFragment();
                 break;
             case R.string.tab_me2:
-                fragment = new MeFragment2();
+                fragment = new UserFragmentTwo();
                 break;
 
         }
@@ -159,11 +158,6 @@ public class MainActivity extends BaseActivity {
                 .titleTextSize(8)
                 .titleNormalColor(R.color.home_explain_text)
                 .titleSelectedColor(R.color.main_color)
-//              .openTouchBg(false)
-//              .marginTop(5)
-//              .itemPadding(5)
-//              .unreadNumThreshold(99)
-//              .unreadTextColor(R.color.white)
                 //还有很多属性，查看Builder里面的方法
                 .create(mNormalIconIds[i], mSelectedIconIds[i], getString(mTitleIds[i]));
         return item;
@@ -176,7 +170,7 @@ public class MainActivity extends BaseActivity {
         transaction.commit();
     }
 
-    private void getPayState(){
+    private void getPayState() {
         String url = Constants.GET_CURRUSER_PAYSTATE;
         OkHttpClient okHttpClient = new OkHttpClient();
         final Request request = new Request.Builder()
@@ -192,27 +186,28 @@ public class MainActivity extends BaseActivity {
                 getLoadingState(1);
                 e.printStackTrace();
             }
+
             @Override
             public void onResponse(Call call, Response response) throws IOException {
 
-                Log.d(TAG, response.protocol() + " " +response.code() + " " + response.message());
-                String content=response.body().string();
+                Log.d(TAG, response.protocol() + " " + response.code() + " " + response.message());
+                String content = response.body().string();
                 if (response != null) {
                     try {
                         JSONObject object = new JSONObject(content);
                         int yes = object.getInt("status");
-                        if(yes==200){
-                            strPayState=object.getString("data");
-                            if(strPayState.isEmpty()||strPayState.equals("null")){
+                        if (yes == 200) {
+                            strPayState = object.getString("data");
+                            if (strPayState.isEmpty() || strPayState.equals("null")) {
                                 getLoadingState(3);
-                            }else{
-                                if(strPayState.equals("true")){
+                            } else {
+                                if (strPayState.equals("true")) {
                                     mTitleIds = new int[]{
                                             R.string.tab_home2,
                                             R.string.tab_order,
                                             R.string.tab_me2
                                     };
-                                }else{
+                                } else {
                                     mTitleIds = new int[]{
                                             R.string.tab_home,
                                             R.string.tab_message,
@@ -221,17 +216,17 @@ public class MainActivity extends BaseActivity {
                                 }
                             }
                             getView();
-                        }else if(yes==401){
+                        } else if (yes == 401) {
                             UserUtil.setSession("");
                             UserUtil.setPhoneNum("");
                             initData();
-                        }else {
+                        } else {
                             getLoadingState(2);
-                            MyToast.show(getApplication(),"Network exception, please try again later.");
+                            MyToast.show(getApplication(), "Network exception, please try again later.");
                         }
-                    }catch (Exception e){
+                    } catch (Exception e) {
                         getLoadingState(2);
-                        MyToast.show(getApplication(),"Network exception, please try again later.");
+                        MyToast.show(getApplication(), "Network exception, please try again later.");
                         e.printStackTrace();
                     }
                 }
@@ -239,7 +234,8 @@ public class MainActivity extends BaseActivity {
             }
         });
     }
-    private void getView(){
+
+    private void getView() {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -260,8 +256,8 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    private void getLoadingState(int type){//type[1：网络超时 2.捕捉错误,请求返回错误码404,401。 3.data为空，暂无数据 4.等待加载页面
-        switch (type){
+    private void getLoadingState(int type) {//type[1：网络超时 2.捕捉错误,请求返回错误码404,401。 3.data为空，暂无数据 4.等待加载页面
+        switch (type) {
             case 1:
                 runOnUiThread(new Runnable() {
                     @Override
@@ -302,7 +298,7 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    private void restartAPPDialog(){
+    private void restartAPPDialog() {
         AlertDialog isExit = new AlertDialog.Builder(this).create();
         // 设置对话框标题
         isExit.setTitle("Tips");
@@ -316,7 +312,7 @@ public class MainActivity extends BaseActivity {
 
     private void restartApp() {
         Intent intent = new Intent(this, RestartAppService.class);
-        intent.putExtra("packageName",getApplication().getPackageName());
+        intent.putExtra("packageName", getApplication().getPackageName());
         startService(intent);
         appExit();
     }

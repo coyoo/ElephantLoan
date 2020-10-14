@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 
 import com.india.elephantloan.R;
 import com.india.elephantloan.base.BaseActivity;
-import com.india.elephantloan.utils.appUtil;
+import com.india.elephantloan.utils.AppUtil;
 
 public class ApprovalActivity extends BaseActivity {
     LinearLayout tvback;
@@ -15,7 +15,7 @@ public class ApprovalActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        appUtil.setTranslucentStatus(this);
+        AppUtil.setTranslucentStatus(this);
     }
 
     @Override

@@ -1,14 +1,25 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 android {
+
+    signingConfigs {
+        release {
+            storeFile file('C:\\Users\\26873\\Desktop\\cfkj.jks')
+            storePassword 'android'
+            keyPassword 'android'
+            keyAlias = 'chengfeng'
+        }
+    }
+
     compileSdkVersion 30
     buildToolsVersion '30.0.0'
     defaultConfig {
         applicationId "com.india.elephantloan"
         minSdkVersion 19
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     aaptOptions {
@@ -22,8 +33,14 @@ android {
         }
     }
 
-}
 
+}
+android.applicationVariants.all {
+    variant ->
+        variant.outputs.all {
+            outputFileName = "ElephantLoan-v${variant.versionName}.apk"
+        }
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.0.0'
@@ -47,8 +64,24 @@ dependencies {
     implementation project(path: ':wheelpicker')
     implementation project(path: ':common')
 
-    implementation 'io.branch.sdk.android:library:2.+'
-    implementation 'com.google.firebase:firebase-appindexing:19.0.0'
-    implementation 'com.google.android.gms:play-services-ads-identifier:16+'
+    implementation 'io.branch.sdk.android:library:5.+'
+//    implementation 'com.google.firebase:firebase-appindexing:19.0.0'
+//    implementation 'com.google.android.gms:play-services-ads-identifier:16+'
+
+    implementation 'com.razorpay:checkout:1.5.16'
+
+    //facebook
+    implementation 'com.facebook.android:facebook-android-sdk:[8,9)'
+
+    implementation 'me.jessyan:progressmanager:1.5.0'
+    implementation 'com.yanzhenjie:permission:2.0.0-rc4'
+
+    //google ads
+    implementation platform('com.google.firebase:firebase-bom:25.12.0')
+
+
+
+    // Firebase Analytics (Java)
+    implementation 'com.google.firebase:firebase-analytics'
 
 }

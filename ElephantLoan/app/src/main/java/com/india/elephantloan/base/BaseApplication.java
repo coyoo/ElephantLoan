@@ -5,17 +5,21 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Handler;
 
+import com.facebook.FacebookSdk;
+import com.facebook.LoggingBehavior;
 import com.india.elephantloan.constant.Constants;
+
+import io.branch.referral.Branch;
 
 
 /**
  * Created by zhangzc on 2017/4/27.
  * 全局变量
  */
-public class MyApplication extends Application {
+public class BaseApplication extends Application {
 
 
-    private static MyApplication mInstance;
+    private static BaseApplication mInstance;
     private static Context mContext;
     //    主线程的handler
     public Handler mMainThreadHandler;
@@ -75,11 +79,21 @@ public class MyApplication extends Application {
     }
 
     private void init() {
+        // Branch logging for debugging
+        Branch.enableLogging();
+        // Branch object initialization
+        Branch.getAutoInstance(this);
+        Branch.enableLogging();
+        Branch.setPlayStoreReferrerCheckTimeout(3000);
+
+        FacebookSdk.setIsDebugEnabled(true);
+        FacebookSdk.addLoggingBehavior(LoggingBehavior.APP_EVENTS);
+
 
 
     }
 
-    public static MyApplication getInstance() {
+    public static BaseApplication getInstance() {
         return mInstance;
     }
 

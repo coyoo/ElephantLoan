@@ -8,9 +8,9 @@ import android.widget.Button;
 
 import com.india.elephantloan.R;
 import com.india.elephantloan.base.BaseFragment;
-import com.india.elephantloan.base.MyApplication;
+import com.india.elephantloan.base.BaseApplication;
 import com.india.elephantloan.constant.Constants;
-import com.india.elephantloan.ui.activity.GetLoanActivity;
+import com.india.elephantloan.ui.activity.ElephantLoanActivity;
 import com.india.elephantloan.ui.activity.LoginActivity;
 import com.india.elephantloan.ui.activity.MainActivity;
 import com.india.elephantloan.utils.MyToast;
@@ -57,7 +57,7 @@ public class HomeFragment extends BaseFragment {
                     getMsg();
 
                 }else{
-                    Intent intent=new Intent(MyApplication.getInstance(), LoginActivity.class);
+                    Intent intent=new Intent(BaseApplication.getInstance(), LoginActivity.class);
                     startActivity(intent);
                 }
             }
@@ -101,7 +101,7 @@ public class HomeFragment extends BaseFragment {
                                 if((!objectData.getString("infoAuthStatus").isEmpty())&&(!objectData.getString("infoAuthStatus").equals("null"))){
                                    String strInfoAuthStatus=objectData.getString("infoAuthStatus");
                                     if (strInfoAuthStatus.equals("1")){
-                                        Intent intent=new Intent(getActivity(), GetLoanActivity.class);
+                                        Intent intent=new Intent(getActivity(), ElephantLoanActivity.class);
                                         startActivity(intent);
                                     }else{
                                         getActivity().runOnUiThread(new Runnable() {

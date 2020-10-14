@@ -10,17 +10,18 @@ import android.widget.LinearLayout;
 
 import com.india.elephantloan.R;
 import com.india.elephantloan.base.BaseActivity;
-import com.india.elephantloan.utils.appUtil;
+import com.india.elephantloan.utils.AppUtil;
 
 public class WebActivity extends BaseActivity {
 
     WebView webView;
     LinearLayout tvback;
+    String title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        appUtil.setTranslucentStatus(this);
+        AppUtil.setTranslucentStatus(this);
         String url=getIntent().getStringExtra("url");
         webView = findViewById(R.id.web_view);
         WebSettings webSettings = webView.getSettings();
@@ -53,8 +54,9 @@ public class WebActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+        title=getIntent().getStringExtra("title");
         setBack();
-        setCusTomeTitle("Panda Loan");
+        setCusTomeTitle(title);
         tvback=findViewById(R.id.tv_jiantou);
     }
 
